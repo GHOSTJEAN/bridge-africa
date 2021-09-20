@@ -22,6 +22,7 @@
             id="floatingInput"
             placeholder="usb key"
             v-model="name"
+            required
           />
           <label for="floatingInput">Product name</label>
         </div>
@@ -32,6 +33,7 @@
             id="floatingInputDescription"
             placeholder="usb key"
             v-model="desc"
+            required
           />
           <label for="floatingInputDescription">Product description</label>
         </div>
