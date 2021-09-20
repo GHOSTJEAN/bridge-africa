@@ -1,7 +1,8 @@
 <template>
   <div class="container mt-5 mb-5">
     <div class="row">
-      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+   <div class="col">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
           <button
             class="nav-link active"
@@ -31,6 +32,7 @@
           </button>
         </li>
       </ul>
+   </div>
       <div class="tab-content" id="pills-tabContent">
         <div
           class="tab-pane fade show active"

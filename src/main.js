@@ -1,15 +1,19 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-//plugins
-import './plugins/bridge-africa-assets';
+import { rtdbPlugin } from 'vuefire'
+Vue.use(rtdbPlugin)
 
+
+//plugins 
+import './plugins/bridge-africa-assets';
+ 
 import router from './router';
 
 Vue.config.productionTip = false
 
-new Vue({
+new Vue({ 
   router,
-  render: h => h(App)
+  render: h => h(App) 
 }).$mount('#app')
-  
+   
