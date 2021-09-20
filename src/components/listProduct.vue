@@ -1,5 +1,6 @@
 <template>
   <div class="row g-4">
+    
     <div
       class="col-6 col-sm-6 col-md-3"
       v-for="product in products"
@@ -39,19 +40,16 @@ export default {
   },
 
   methods: {
-    close() {
-      this.delete = true;
-    },
 
     deleteProduct(product) {
       if (confirm(`Are you sure to delete the product ${product.name} ?`)) {console.log('ok');
-        db.ref("users/products/" +product['.key']).remove();
+        db.ref("users/products/" +product['.key'])
+          .remove()
+          .catch(function(error){
+            alert(error.message);
+          });
       }
     },
-  },
-
-  mounted() {
-    //console.log(product.name)
   },
 };
 </script>
